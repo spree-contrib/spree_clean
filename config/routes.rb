@@ -1,3 +1,3 @@
 SpreeClean::Engine.routes.draw do
-  # Add your extension routes here
+  match 'admin/cleanup' => 'cleanup#index'
 end

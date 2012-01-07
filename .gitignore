@@ -7,4 +7,5 @@
 tmp
 nbproject
 *.swp
+*.swo
 spec/dummy
