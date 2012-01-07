@@ -1,3 +1,5 @@
-SpreeClean::Engine.routes.draw do
-  match 'admin/cleanup' => 'cleanup#index'
+Spree::Core::Engine.routes.prepend do
+  namespace :admin do
+    match 'cleanup' => 'cleanup#index'
+  end
 end
