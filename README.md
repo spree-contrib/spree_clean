@@ -1,8 +1,7 @@
 SpreeClean
 ==========
 
-Introduction goes here.
-
+Spree Clean is a Spree Admin User Interface to allow the removal of sample / test data.
 
 Example
 =======
