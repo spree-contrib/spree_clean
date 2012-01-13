@@ -1,49 +1,52 @@
 <%= form_tag spree.admin_cleanup_path, :method => :post do %>
-  <ul id="">
-    <li>
-    <%= check_box_tag 'all_data'%> All data
+  <div id="spree_clean">
     <ul>
       <li>
-      <%= check_box_tag 'orders'%> Orders
-      </li>
-      <li>
-     <%= check_box_tag 'products'%>  Products
+      <%= check_box_tag 'all_data'%> All data
       <ul>
         <li>
-        <%= check_box_tag 'option_types '%>   Option Types
+        <%= check_box_tag 'orders'%> Orders
         </li>
         <li>
-       <%= check_box_tag 'properties'%> Properties
-        </li>
-      </ul>
-      </li>
-      <li>
-      <%= check_box_tag 'taxonomies'%> Taxonomies
-      </li>
-      <li>
-      <%= check_box_tag 'users'%> Users
-      </li>
-      <li>
-      <%= check_box_tag 'all_configurations_data'%> All configurations data
-      <ul>
-        <li>
-       <%= check_box_tag 'payment_methods'%> Payment methods
+        <%= check_box_tag 'products'%>  Products
+        <ul>
+          <li>
+          <%= check_box_tag 'option_types '%>   Option Types
+          </li>
+          <li>
+          <%= check_box_tag 'properties'%> Properties
+          </li>
+        </ul>
         </li>
         <li>
-        <%= check_box_tag 'shipping_methods'%> Shipping Methods
+        <%= check_box_tag 'taxonomies'%> Taxonomies
         </li>
         <li>
-        <%= check_box_tag 'countries'%> Countries
+        <%= check_box_tag 'users'%> Users
         </li>
         <li>
-        <%= check_box_tag 'states'%> States
-        </li>
-        <li>
-        <%= check_box_tag 'zones'%> Zones
+        <%= check_box_tag 'all_configurations_data'%> All configurations data
+        <ul>
+          <li>
+          <%= check_box_tag 'payment_methods'%> Payment methods
+          </li>
+          <li>
+          <%= check_box_tag 'shipping_methods'%> Shipping Methods
+          </li>
+          <li>
+          <%= check_box_tag 'countries'%> Countries
+          </li>
+          <li>
+          <%= check_box_tag 'states'%> States
+          </li>
+          <li>
+          <%= check_box_tag 'zones'%> Zones
+          </li>
+        </ul>
         </li>
       </ul>
       </li>
     </ul>
-    </li>
-  </ul>
+    <input name='clean_button' id='clean_button' type='submit' value='clean data'> 
+  </div>
 <% end %>
