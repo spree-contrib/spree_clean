@@ -3,48 +3,54 @@
     <ul>
       <li>
       <%= f.check_box 'all_data', {:class => "parentCheckBox"}, 'yes', 'no' %> All data
-      <ul>
-        <li>
-        <%= f.check_box 'orders', {}, 'yes', 'no' %> Orders
-        </li>
-        <li>
-        <%= f.check_box 'products', {:class => "parentCheckBox"}, 'yes', 'no'  %>  Products
+      <%= f.fields_for :all_data do |cf|%> 
         <ul>
           <li>
-          <%= f.check_box 'option_types',{}, 'yes', 'no'  %>   Option Types
+          <%= cf.check_box 'orders', {}, 'yes', 'no' %> Orders
           </li>
           <li>
-          <%= f.check_box 'properties',{}, 'yes', 'no' %> Properties
+          <%= cf.check_box 'products', {:class => "parentCheckBox"}, 'yes', 'no'  %>  Products
+          <%= cf.fields_for :products do |pcf|%> 
+            <ul>
+              <li>
+              <%= pcf.check_box 'option_types',{}, 'yes', 'no'  %>   Option Types
+              </li>
+              <li>
+              <%= pcf.check_box 'properties',{}, 'yes', 'no' %> Properties
+              </li>
+            </ul>
+          <% end %>
+          </li>
+          <li>
+          <%= cf.check_box 'taxonomies', {}, 'yes', 'no'  %> Taxonomies
+          </li>
+          <li>
+          <%= cf.check_box 'users',{}, 'yes', 'no'  %> Users
+          </li>
+          <li>
+          <%= cf.check_box 'all_configurations_data', {:class => "parentCheckBox"}, 'yes', 'no'  %> All configurations data
+          <%= cf.fields_for :all_configurations_data do |acf|%> 
+            <ul>
+              <li>
+              <%= acf.check_box 'payment_methods',{}, 'yes', 'no'  %> Payment methods
+              </li>
+              <li>
+              <%= acf.check_box 'shipping_methods',{}, 'yes', 'no'  %> Shipping Methods
+              </li>
+              <li>
+              <%= acf.check_box 'countries',{}, 'yes', 'no'  %> Countries
+              </li>
+              <li>
+              <%= acf.check_box 'states', {}, 'yes', 'no' %> States
+              </li>
+              <li>
+              <%= acf.check_box 'zones', {}, 'yes', 'no' %> Zones
+              </li>
+            </ul>
+          <% end %>
           </li>
         </ul>
-        </li>
-        <li>
-        <%= f.check_box 'taxonomies', {}, 'yes', 'no'  %> Taxonomies
-        </li>
-        <li>
-        <%= f.check_box 'users',{}, 'yes', 'no'  %> Users
-        </li>
-        <li>
-        <%= f.check_box 'all_configurations_data', {:class => "parentCheckBox"}, 'yes', 'no'  %> All configurations data
-        <ul>
-          <li>
-          <%= f.check_box 'payment_methods',{}, 'yes', 'no'  %> Payment methods
-          </li>
-          <li>
-          <%= f.check_box 'shipping_methods',{}, 'yes', 'no'  %> Shipping Methods
-          </li>
-          <li>
-          <%= f.check_box 'countries',{}, 'yes', 'no'  %> Countries
-          </li>
-          <li>
-          <%= f.check_box 'states', {}, 'yes', 'no' %> States
-          </li>
-          <li>
-          <%= f.check_box 'zones', {}, 'yes', 'no' %> Zones
-          </li>
-        </ul>
-        </li>
-      </ul>
+      <% end %>
       </li>
     </ul>
     <%= f.submit "clean data", :name => "clean_button", :id => "clean_button" %>
