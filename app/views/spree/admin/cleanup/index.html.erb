@@ -1,52 +1,52 @@
-<%= form_tag spree.admin_cleanup_path, :method => :post do %>
+<%= form_for :cleanup, :url => spree.admin_cleanup_path, :as => :post do |f|%>
   <div id="spree_clean">
     <ul>
       <li>
-      <%= check_box_tag 'all_data', 'yes', false, :class => "parentCheckBox" %> All data
+      <%= f.check_box 'all_data', {:class => "parentCheckBox"}, 'yes', 'no' %> All data
       <ul>
         <li>
-        <%= check_box_tag 'orders', 'yes', false, %> Orders
+        <%= f.check_box 'orders', {}, 'yes', 'no' %> Orders
         </li>
         <li>
-        <%= check_box_tag 'products', 'yes', false, :class => "parentCheckBox" %>  Products
+        <%= f.check_box 'products', {:class => "parentCheckBox"}, 'yes', 'no'  %>  Products
         <ul>
           <li>
-          <%= check_box_tag 'option_types', 'yes', false, %>   Option Types
+          <%= f.check_box 'option_types',{}, 'yes', 'no'  %>   Option Types
           </li>
           <li>
-          <%= check_box_tag 'properties', 'yes', false, %> Properties
+          <%= f.check_box 'properties',{}, 'yes', 'no' %> Properties
           </li>
         </ul>
         </li>
         <li>
-        <%= check_box_tag 'taxonomies', 'yes', false, %> Taxonomies
+        <%= f.check_box 'taxonomies', {}, 'yes', 'no'  %> Taxonomies
         </li>
         <li>
-        <%= check_box_tag 'users', 'yes', false, %> Users
+        <%= f.check_box 'users',{}, 'yes', 'no'  %> Users
         </li>
         <li>
-        <%= check_box_tag 'all_configurations_data',  'yes', false, :class => "parentCheckBox" %> All configurations data
+        <%= f.check_box 'all_configurations_data', {:class => "parentCheckBox"}, 'yes', 'no'  %> All configurations data
         <ul>
           <li>
-          <%= check_box_tag 'payment_methods', 'yes', false, %> Payment methods
+          <%= f.check_box 'payment_methods',{}, 'yes', 'no'  %> Payment methods
           </li>
           <li>
-          <%= check_box_tag 'shipping_methods', 'yes', false, %> Shipping Methods
+          <%= f.check_box 'shipping_methods',{}, 'yes', 'no'  %> Shipping Methods
           </li>
           <li>
-          <%= check_box_tag 'countries', 'yes', false, %> Countries
+          <%= f.check_box 'countries',{}, 'yes', 'no'  %> Countries
           </li>
           <li>
-          <%= check_box_tag 'states', 'yes', false, %> States
+          <%= f.check_box 'states', {}, 'yes', 'no' %> States
           </li>
           <li>
-          <%= check_box_tag 'zones', 'yes', false, %> Zones
+          <%= f.check_box 'zones', {}, 'yes', 'no' %> Zones
           </li>
         </ul>
         </li>
       </ul>
       </li>
     </ul>
-    <input name='clean_button' id='clean_button' type='submit' value='clean data'> 
+    <%= f.submit "clean data", :name => "clean_button", :id => "clean_button" %>
   </div>
 <% end %>
