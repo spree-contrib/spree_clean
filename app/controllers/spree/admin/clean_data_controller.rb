@@ -1,7 +1,7 @@
 module Spree
   module Admin
     class CleanDataController < BaseController
-      def clean_data
+      def destroy_data
 
       end
     end
