@@ -6,3 +6,4 @@ en:
   clean_data_warning: "Warning: Any actions taken on this page will permanently delete data from the application. Use with caution!"
   confirm_delete_data: "Are you sure you wish to continure? This operation cannot be undone."
   destroy_data: "Destroy Data"
+  product_scopes_label: "Product Scopes"
