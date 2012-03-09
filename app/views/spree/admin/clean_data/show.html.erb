@@ -2,6 +2,8 @@
 
 <h1><%= t(:clean_data) %></h1>
 
+<p class="warning"><strong><%= t :clean_data_warning %></strong></p>
+
 <%= form_tag admin_destroy_data_path, :method => :delete do %>
   <p data-hook="resources-list">
     <%= label_tag 'resources[address]', t(:addresses) %>
@@ -93,8 +95,8 @@
   </p>
 
   <p class="form-buttons" data-hook="buttons">
-    <%= submit_tag t(:destroy_data), :confirm => 'Are you sure?' %>
-    <%= t(:or) %> <%= link_to t(:cancel), admin_tax_settings_url %>
+    <%= submit_tag t(:destroy_data), :confirm => "#{t(:confirm_delete_data)}" %>
+    <%= t(:or) %> <%= link_to t(:cancel), admin_configurations_path %>
   </p>
 <% end %>
 
