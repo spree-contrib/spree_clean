@@ -1,0 +1,88 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1><%= t(:clean_data) %></h1>
+
+<%= form_tag admin_destroy_data_path, :method => :delete do %>
+  <p data-hook="resources-list">
+    <%= label_tag 'resources[address]', t(:addresses) %>
+    <%= check_box_tag 'resources[address]', '1', true %>
+    <br />
+    <%= label_tag 'resources[adjustment]', t(:adjustments) %>
+    <%= check_box_tag 'resources[adjustment]', '1', true %>
+    <br />
+    <%= label_tag 'resources[asset]', t(:assets) %>
+    <%= check_box_tag 'resources[asset]', '1', true %>
+    <br />
+    <%= label_tag 'resources[calculator]', t(:calculators) %>
+    <%= check_box_tag 'resources[calculator]', '1', true %>
+    <br />
+    <%= label_tag 'resources[line_item]', t(:line_items) %>
+    <%= check_box_tag 'resources[line_item]', '1', true %>
+    <br />
+    <%= label_tag 'resources[option_type]', t(:option_types) %>
+    <%= check_box_tag 'resources[option_type]', '1', true %>
+    <br />
+    <%= label_tag 'resources[option_value]', t(:option_values) %>
+    <%= check_box_tag 'resources[option_value]', '1', true %>
+    <br />
+    <%= label_tag 'resources[order]', t(:orders) %>
+    <%= check_box_tag 'resources[order]', '1', true %>
+    <br />
+    <%= label_tag 'resources[payment_method]', t(:payment_methods) %>
+    <%= check_box_tag 'resources[payment_method]', '1', true %>
+    <br />
+    <%= label_tag 'resources[product_group]', t(:product_groups) %>
+    <%= check_box_tag 'resources[product_group]', '1', true %>
+    <br />
+    <%= label_tag 'resources[product_option_type]', t(:product_option_types) %>
+    <%= check_box_tag 'resources[product_option_type]', '1', true %>
+    <br />
+    <%= label_tag 'resources[product_property]', t(:product_properties) %>
+    <%= check_box_tag 'resources[product_property]', '1', true %>
+    <br />
+    <%= label_tag 'resources[product_scope]', t(:product_scopes_label) %>
+    <%= check_box_tag 'resources[product_scope]', '1', true %>
+    <br />
+    <%= label_tag 'resources[product]', t(:products) %>
+    <%= check_box_tag 'resources[product]', '1', true %>
+    <br />
+    <%= label_tag 'resources[property]', t(:properties) %>
+    <%= check_box_tag 'resources[property]', '1', true %>
+    <br />
+    <%= label_tag 'resources[prototype]', t(:prototypes) %>
+    <%= check_box_tag 'resources[prototype]', '1', true %>
+    <br />
+    <%= label_tag 'resources[shipment]', t(:shipments) %>
+    <%= check_box_tag 'resources[shipment]', '1', true %>
+    <br />
+    <%= label_tag 'resources[shipping_category]', t(:shipping_categories) %>
+    <%= check_box_tag 'resources[shipping_category]', '1', true %>
+    <br />
+    <%= label_tag 'resources[shipping_method]', t(:shipping_methods) %>
+    <%= check_box_tag 'resources[shipping_method]', '1', true %>
+    <br />
+    <%= label_tag 'resources[tax_category]', t(:tax_categories) %>
+    <%= check_box_tag 'resources[tax_category]', '1', true %>
+    <br />
+    <%= label_tag 'resources[tax_rate]', t(:tax_rates) %>
+    <%= check_box_tag 'resources[tax_rate]', '1', true %>
+    <br />
+    <%= label_tag 'resources[taxonomy]', t(:taxonomies) %>
+    <%= check_box_tag 'resources[taxonomy]', '1', true %>
+    <br />
+    <%= label_tag 'resources[taxon]', t(:taxons) %>
+    <%= check_box_tag 'resources[taxon]', '1', true %>
+    <br />
+    <%= label_tag 'resources[user]', t(:users) %>
+    <%= check_box_tag 'resources[user]', '1', true %>
+    <br />
+    <%= label_tag 'resources[variant]', t(:variants) %>
+    <%= check_box_tag 'resources[variant]', '1', true %>
+  </p>
+
+  <p class="form-buttons" data-hook="buttons">
+    <%= submit_tag t(:destroy_data), :confirm => 'Are you sure?' %>
+    <%= t(:or) %> <%= link_to t(:cancel), admin_tax_settings_url %>
+  </p>
+<% end %>
+
