@@ -16,6 +16,9 @@
     <%= label_tag 'resources[calculator]', t(:calculators) %>
     <%= check_box_tag 'resources[calculator]', '1', true %>
     <br />
+    <%= label_tag 'resources[country]', t(:countries) %>
+    <%= check_box_tag 'resources[country]', '1', false %>
+    <br />
     <%= label_tag 'resources[line_item]', t(:line_items) %>
     <%= check_box_tag 'resources[line_item]', '1', true %>
     <br />
@@ -61,6 +64,9 @@
     <%= label_tag 'resources[shipping_method]', t(:shipping_methods) %>
     <%= check_box_tag 'resources[shipping_method]', '1', true %>
     <br />
+    <%= label_tag 'resources[state]', t(:states) %>
+    <%= check_box_tag 'resources[state]', '1', false %>
+    <br />
     <%= label_tag 'resources[tax_category]', t(:tax_categories) %>
     <%= check_box_tag 'resources[tax_category]', '1', true %>
     <br />
@@ -78,6 +84,12 @@
     <br />
     <%= label_tag 'resources[variant]', t(:variants) %>
     <%= check_box_tag 'resources[variant]', '1', true %>
+    <br />
+    <%= label_tag 'resources[zone_member]', t(:zone_members) %>
+    <%= check_box_tag 'resources[zone_member]', '1', false %>
+    <br />
+    <%= label_tag 'resources[zone]', t(:zones) %>
+    <%= check_box_tag 'resources[zone]', '1', false %>
   </p>
 
   <p class="form-buttons" data-hook="buttons">
