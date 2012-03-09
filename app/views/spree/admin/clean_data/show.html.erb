@@ -4,8 +4,14 @@
 
 <p class="warning"><strong><%= t :clean_data_warning %></strong></p>
 
+<p>
+  <a href="#select_all">Select All</a> |
+  <a href="#select_none">Select None</a> |
+  <a href="#invert_selection">Invert Selection</a>
+</p>
+
 <%= form_tag admin_destroy_data_path, :method => :delete do %>
-  <p data-hook="resources-list">
+  <p data-hook="resources-list" class="resources-list">
     <%= label_tag 'resources[address]', t(:addresses) %>
     <%= check_box_tag 'resources[address]', '1', true %>
     <br />
