@@ -1,21 +1,21 @@
-SpreeClean
+Spree Clean
 ==========
 
-Introduction goes here.
+A Spree extension which facilitates easy deletion of application data. This includes both seed and sample data. This extension adds a new section to the Configurations menu on your store's admin.
 
 
-Example
+Installation & Usage
 =======
 
-Example goes here.
+Add the following to your Gemfile
 
-Testing
--------
+	gem 'spree_clean'
+	
+Next run bundle install followed by the install generator
 
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
+	rails generate spree_clean:install
+	
+Navigate to your store's admin and head to the Configurations menu. Follow the link to "Clean Data" and begin using the extension.
 
-    $ bundle
-    $ bundle exec rake test app
-    $ bundle exec rspec spec
 
-Copyright (c) 2012 [name of extension creator], released under the New BSD License
+Copyright (c) 2012 John Dyer, released under the New BSD License
