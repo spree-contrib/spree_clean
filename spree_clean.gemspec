@@ -1,8 +1,9 @@
 # encoding: UTF-8
+$:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_clean'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.summary     = 'Delete data via the Spree admin'
   s.description = 'Spree Extension that facilitates mass deletion of application data'
   s.required_ruby_version = '>= 1.8.7'
@@ -12,8 +13,7 @@ Gem::Specification.new do |s|
   s.homepage          = 'http://www.spreecommerce.com'
 
   s.files         = `git ls-files`.split("\n")
-  #s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.require_path = 'lib'
+  s.require_path  = 'lib'
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 1.0.0'
