@@ -9,7 +9,7 @@ Installation & Usage
 
 Add the following to your Gemfile
 
-	gem 'spree_clean'
+	gem 'spree_clean', :git => "git://github.com/spree/spree_clean.git"
 	
 Next run bundle install followed by the install generator
 
