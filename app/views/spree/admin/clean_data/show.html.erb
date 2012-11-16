@@ -1,6 +1,8 @@
 <%= render :partial => 'spree/admin/shared/configuration_menu' %>
 
-<h1><%= t(:clean_data) %></h1>
+<% content_for :page_title do %>
+  <%= t(:clean_data) %>
+<% end %>
 
 <p class="warning"><strong><%= t :clean_data_warning %></strong></p>
 
@@ -9,6 +11,8 @@
   <a href="#select_none">Select None</a> |
   <a href="#invert_selection">Invert Selection</a>
 </p>
+
+<br />
 
 <%= form_tag admin_destroy_data_path, :method => :delete do %>
   <p data-hook="resources-list" class="resources-list">
@@ -96,7 +100,7 @@
 
   <p class="form-buttons" data-hook="buttons">
     <%= submit_tag t(:destroy_data), :confirm => "#{t(:confirm_delete_data)}" %>
-    <%= t(:or) %> <%= link_to t(:cancel), admin_configurations_path %>
+    <%= t(:or) %> <%= link_to t(:cancel), edit_admin_general_settings_path %>
   </p>
 <% end %>
 
