@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_clean'
-  s.version     = '1.0.5'
+  s.version     = '1.0.6'
   s.summary     = 'Delete data via the Spree admin'
   s.description = 'Spree Extension that facilitates mass deletion of application data'
   s.required_ruby_version = '>= 1.8.7'
