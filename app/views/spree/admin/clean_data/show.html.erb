@@ -1,10 +1,10 @@
 <%= render :partial => 'spree/admin/shared/configuration_menu' %>
 
 <% content_for :page_title do %>
-  <%= t(:clean_data) %>
+  <%= Spree.t(:clean_data) %>
 <% end %>
 
-<p class="warning"><strong><%= t :clean_data_warning %></strong></p>
+<p class="warning"><strong><%= Spree.t :clean_data_warning %></strong></p>
 
 <p>
   <a href="#select_all">Select All</a> |
@@ -17,89 +17,89 @@
 <%= form_tag admin_destroy_data_path, :method => :delete do %>
   <p data-hook="resources-list" class="resources-list">
     <%= check_box_tag 'resources[address]', '1', true %>
-    <%= label_tag 'resources[address]', t(:addresses) %>
+    <%= label_tag 'resources[address]', Spree.t(:addresses) %>
     <br />
     <%= check_box_tag 'resources[adjustment]', '1', true %>
-    <%= label_tag 'resources[adjustment]', t(:adjustments) %>
+    <%= label_tag 'resources[adjustment]', Spree.t(:adjustments) %>
     <br />
     <%= check_box_tag 'resources[asset]', '1', true %>
-    <%= label_tag 'resources[asset]', t(:assets) %>
+    <%= label_tag 'resources[asset]', Spree.t(:assets) %>
     <br />
     <%= check_box_tag 'resources[calculator]', '1', true %>
-    <%= label_tag 'resources[calculator]', t(:calculators) %>
+    <%= label_tag 'resources[calculator]', Spree.t(:calculators) %>
     <br />
     <%= check_box_tag 'resources[country]', '1', false %>
-    <%= label_tag 'resources[country]', t(:countries) %>
+    <%= label_tag 'resources[country]', Spree.t(:countries) %>
     <br />
     <%= check_box_tag 'resources[line_item]', '1', true %>
-    <%= label_tag 'resources[line_item]', t(:line_items) %>
+    <%= label_tag 'resources[line_item]', Spree.t(:line_items) %>
     <br />
     <%= check_box_tag 'resources[option_type]', '1', true %>
-    <%= label_tag 'resources[option_type]', t(:option_types) %>
+    <%= label_tag 'resources[option_type]', Spree.t(:option_types) %>
     <br />
     <%= check_box_tag 'resources[option_value]', '1', true %>
-    <%= label_tag 'resources[option_value]', t(:option_values) %>
+    <%= label_tag 'resources[option_value]', Spree.t(:option_values) %>
     <br />
     <%= check_box_tag 'resources[order]', '1', true %>
-    <%= label_tag 'resources[order]', t(:orders) %>
+    <%= label_tag 'resources[order]', Spree.t(:orders) %>
     <br />
     <%= check_box_tag 'resources[payment_method]', '1', true %>
-    <%= label_tag 'resources[payment_method]', t(:payment_methods) %>
+    <%= label_tag 'resources[payment_method]', Spree.t(:payment_methods) %>
     <br />
     <%= check_box_tag 'resources[product_option_type]', '1', true %>
-    <%= label_tag 'resources[product_option_type]', t(:product_option_types) %>
+    <%= label_tag 'resources[product_option_type]', Spree.t(:product_option_types) %>
     <br />
     <%= check_box_tag 'resources[product_property]', '1', true %>
-    <%= label_tag 'resources[product_property]', t(:product_properties) %>
+    <%= label_tag 'resources[product_property]', Spree.t(:product_properties) %>
     <br />
     <%= check_box_tag 'resources[product]', '1', true %>
-    <%= label_tag 'resources[product]', t(:products) %>
+    <%= label_tag 'resources[product]', Spree.t(:products) %>
     <br />
     <%= check_box_tag 'resources[property]', '1', true %>
-    <%= label_tag 'resources[property]', t(:properties) %>
+    <%= label_tag 'resources[property]', Spree.t(:properties) %>
     <br />
     <%= check_box_tag 'resources[prototype]', '1', true %>
-    <%= label_tag 'resources[prototype]', t(:prototypes) %>
+    <%= label_tag 'resources[prototype]', Spree.t(:prototypes) %>
     <br />
     <%= check_box_tag 'resources[shipment]', '1', true %>
-    <%= label_tag 'resources[shipment]', t(:shipments) %>
+    <%= label_tag 'resources[shipment]', Spree.t(:shipments) %>
     <br />
     <%= check_box_tag 'resources[shipping_category]', '1', true %>
-    <%= label_tag 'resources[shipping_category]', t(:shipping_categories) %>
+    <%= label_tag 'resources[shipping_category]', Spree.t(:shipping_categories) %>
     <br />
     <%= check_box_tag 'resources[shipping_method]', '1', true %>
-    <%= label_tag 'resources[shipping_method]', t(:shipping_methods) %>
+    <%= label_tag 'resources[shipping_method]', Spree.t(:shipping_methods) %>
     <br />
     <%= check_box_tag 'resources[state]', '1', false %>
-    <%= label_tag 'resources[state]', t(:states) %>
+    <%= label_tag 'resources[state]', Spree.t(:states) %>
     <br />
     <%= check_box_tag 'resources[tax_category]', '1', true %>
-    <%= label_tag 'resources[tax_category]', t(:tax_categories) %>
+    <%= label_tag 'resources[tax_category]', Spree.t(:tax_categories) %>
     <br />
     <%= check_box_tag 'resources[tax_rate]', '1', true %>
-    <%= label_tag 'resources[tax_rate]', t(:tax_rates) %>
+    <%= label_tag 'resources[tax_rate]', Spree.t(:tax_rates) %>
     <br />
     <%= check_box_tag 'resources[taxonomy]', '1', true %>
-    <%= label_tag 'resources[taxonomy]', t(:taxonomies) %>
+    <%= label_tag 'resources[taxonomy]', Spree.t(:taxonomies) %>
     <br />
     <%= check_box_tag 'resources[taxon]', '1', true %>
-    <%= label_tag 'resources[taxon]', t(:taxons) %>
+    <%= label_tag 'resources[taxon]', Spree.t(:taxons) %>
     <br />
     <%= check_box_tag 'resources[user]', '1', true %>
-    <%= label_tag 'resources[user]', t(:users) %>
+    <%= label_tag 'resources[user]', Spree.t(:users) %>
     <br />
     <%= check_box_tag 'resources[variant]', '1', true %>
-    <%= label_tag 'resources[variant]', t(:variants) %>
+    <%= label_tag 'resources[variant]', Spree.t(:variants) %>
     <br />
     <%= check_box_tag 'resources[zone_member]', '1', false %>
-    <%= label_tag 'resources[zone_member]', t(:zone_members) %>
+    <%= label_tag 'resources[zone_member]', Spree.t(:zone_members) %>
     <br />
     <%= check_box_tag 'resources[zone]', '1', false %>
-    <%= label_tag 'resources[zone]', t(:zones) %>
+    <%= label_tag 'resources[zone]', Spree.t(:zones) %>
   </p>
 
   <p class="form-buttons" data-hook="buttons">
-    <%= submit_tag t(:destroy_data), :confirm => "#{t(:confirm_delete_data)}" %>
-    <%= t(:or) %> <%= link_to t(:cancel), edit_admin_general_settings_path %>
+    <%= submit_tag Spree.t(:destroy_data), :confirm => "#{Spree.t(:confirm_delete_data)}" %>
+    <%= Spree.t(:or) %> <%= link_to Spree.t(:cancel), edit_admin_general_settings_path %>
   </p>
 <% end %>

@@ -5,7 +5,7 @@ module Spree
         params[:resources].each_key do |resource|
           case resource
           when "user"
-            Spree::User.where('id NOT IN (SELECT user_id FROM spree_roles_users)').delete_all
+            Spree.user_class.where('id NOT IN (SELECT user_id FROM spree_roles_users)').delete_all
           when "address"
             Spree::Address.delete_all
           else
@@ -13,7 +13,7 @@ module Spree
           end
         end
 
-        flash[:notice] = "Selected data has been successfully deleted"
+        flash[:success] = "Selected data has been successfully deleted"
         redirect_to admin_clean_data_path
       end
     end

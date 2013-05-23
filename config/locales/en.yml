@@ -2,8 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  clean_data_description: "Bulk delete data from your application."
-  clean_data_warning: "Warning: Any actions taken on this page will permanently delete data from the application. Use with caution!"
-  confirm_delete_data: "Are you sure you wish to continue? This operation cannot be undone."
-  destroy_data: "Destroy Data"
-  product_scopes_label: "Product Scopes"
+  spree:
+    clean_data: "Clean Data"
+    clean_data_description: "Bulk delete data from your application."
+    clean_data_warning: "Warning: Any actions taken on this page will permanently delete data from the application. Use with caution!"
+    confirm_delete_data: "Are you sure you wish to continue? This operation cannot be undone."
+    destroy_data: "Destroy Data"
+    product_scopes_label: "Product Scopes"
